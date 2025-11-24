@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Clock — Modern Responsive Clock</title>
+  <meta name="description" content="A modern, responsive digital clock built with HTML, CSS and JavaScript. Supports 12/24-hour toggle, accessible markup and optimized for SEO and performance.">
+  <link rel="canonical" href="https://example.com/digital-clock">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph for social preview -->
+  <meta property="og:title" content="Digital Clock — Modern Responsive Clock">
+  <meta property="og:description" content="A modern, responsive digital clock built with HTML, CSS and JavaScript.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/digital-clock">
+
+  <!-- Structured data for basic SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Digital Clock — Modern Responsive Clock",
+    "description": "A modern, responsive digital clock built with HTML, CSS and JavaScript.",
+    "url": "https://example.com/digital-clock"
+  }
+  </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="clock-heading">
+    <section class="clock" aria-label="Digital clock">
+      <div class="face" aria-hidden="false">
+        <h1 id="clock-heading" class="time" aria-live="polite"><time id="time">00:00:00</time></h1>
+        <p id="ampm" class="small" aria-hidden="true">24-hour</p>
+      </div>
+
+      <div class="controls" aria-hidden="false">
+        <div class="toggle" role="group" aria-label="Time format">
+          <label for="format" class="small" style="font-weight:700">Format</label>
+          <select id="format" aria-controls="time ampm" title="Select time format">
+            <option value="24">24-hour</option>
+            <option value="12">12-hour</option>
+          </select>
+        </div>
+
+        <div class="toggle" role="group" aria-label="Timezone">
+          <label for="timezone" class="small" style="font-weight:700">Timezone</label>
+          <select id="timezone" title="Choose timezone">
+            <option value="local">Local</option>
+            <option value="UTC">UTC</option>
+            <option value="Africa/Nairobi">Africa/Nairobi</option>
+            <option value="America/New_York">America/New_York</option>
+            <option value="Asia/Tokyo">Asia/Tokyo</option>
+          </select>
+        </div>
+
+        <button id="copy" class="btn" title="Copy time to clipboard">Copy</button>
+        <a id="download" class="btn" download="digital-clock.txt" href="#" title="Download time as text">Download</a>
+      </div>
+    </section>
+
+    <aside class="meta" aria-label="Clock info">
+      <div>
+        <div style="font-weight:700">Modern digital clock</div>
+        <div class="small">Responsive, accessible and SEO friendly</div>
+      </div>
+      <div>
+        <div style="font-weight:700">Updated</div>
+        <div class="small" id="last-updated">—</div>
+      </div>
+    </aside>
+  </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
